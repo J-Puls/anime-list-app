@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/anime-app.css">
+    <title>Anime List App</title>
+</head>
+
+<body class="bg-dark">
+    <div class="container p-1 mt-5 text-light">
+        <div class="row mx-0">
+            <div class="col-10 col-md-10 mx-auto p-2">
+                <p class="h1 text-center mb-4">Anime List App</p>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-10 col-md-10 mx-auto bg-secondary rounded p-3 shadow">
+
+                <button class="btn btn-link float-right" id="add-new-btn" data-toggle="collapse" data-target="#add-new"
+                    role="button" aria-expanded="false" aria-controls="add-new">
+                    <i class="material-icons text-white font-weight-bold">add</i>
+                </button>
+                <legend>Add New Anime</legend>
+                <form id="add-new" class="form-group p-2 collapse">
+                    <input type="text" class="form-control form-control-lg" id="title" aria-describedby="titleHelp"
+                        placeholder="Title">
+                    <small id="titleHelp" class="form-text">Enter the title of the anime you wish to add.</small>
+                    <button id="submit" class="btn btn-primary mt-2">Find It</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mx-0 bg-dark sticky-top shadow-sm">
+            <p class="h3 p-2 ">All Titles</p>
+        </div>
+        <div class="row mt-3 px-2 mx-0" id="content-container"></div>
+    </div>
+
+    <!-- More Info Modal -->
+
+    <div class="modal fade" data-backdrop="static" id="moreInfoModal" tabindex="-1" role="dialog"
+        aria-labelledby="moreInfoModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="moreInfoModalTitle">More Info</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-danger">&times;</span>
+                    </button>
+                </div>
+                <div id="info-modal-body" class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <button id="preview-modal-btn" type="button" class="btn btn-primary" data-target="#previewModal" hidden></button>
+    <div class="modal fade" data-backdrop="static" id="previewModal" tabindex="-1" role="dialog"
+        aria-labelledby="previewModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="previewModalTitle">Is this correct?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="preview-modal-body" class="modal-body"></div>
+                <div class="modal-footer">
+                    <button id="confirm-btn" type="button" class="btn btn-success">Yep :)</button>
+                    <button id="decline-btn" type="button" class="btn btn-secondary">Nope :(</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/anime-app.js"></script>
+</body>
+
+</html>

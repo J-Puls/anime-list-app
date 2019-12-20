@@ -1,0 +1,24 @@
+.figure-img{
+    object-fit: cover;
+}
+figcaption{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+@media screen and (max-width: 768px){
+    .display-img{
+        height: 230px;
+    }
+}
+@media screen and (min-width: 768px){
+    .display-img{
+        height: 360px;
+    }
+}
+
+.delete-btn{
+    
+    right: 10px;
+}
