@@ -1,2 +1,4 @@
+View the live version at https://jpuls.online/anime-app/anime-app.html
+
 # anime-list-app
  A small "my favorites" style catologue application for keeping track of anime titles. This app uses mostly vanilla Javascript for functionality (with a sprinkle of jQuery for simplicity). When the user enters an anime title into the "add new" search box, a fetch call is made to an external API, which returns the most relevant result to the query. A modal is presented with a snippet of information about the chosen title, which the user can then either confirm (adds the title to the local array and updates the HTML), or decline (simply clears the query, allowing another search). Additionally, more information about existing titles can be viewed via the "More Info" button, and likewise the "delete" button removes the chosen item from the array. The styling for the application is based on the popular Bootstrap 4 framework. 
